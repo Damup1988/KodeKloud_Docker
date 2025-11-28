@@ -1,0 +1,8 @@
+# list available images
+docker images
+
+# delete image
+docker rmi image_name
+
+# pull a docker image without running a container
+docker pull image_name
