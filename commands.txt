@@ -31,3 +31,6 @@ docker run -d container_name
 
 # run a container from an image and log to it using bash
 docker run -it image_name bash
+
+# run a container from an image using custom image_name
+docker run --name custom_name image_name
