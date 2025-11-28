@@ -1,6 +1,9 @@
 # run a docker container
 docker run image_name
 
+# run a container and excute a command
+docker run image_name "command to execute"
+
 # run a docker container with ability to continue to use terminal
 docker run -d container_name
 
@@ -9,3 +12,9 @@ docker run -it image_name bash
 
 # run a container from an image using custom image_name
 docker run --name custom_name image_name
+
+# run a container with port exposure
+docker run -p 80:5000 image_name
+
+# run a container with mapping a persistent storage
+docker run -v /dir_on_host:/dir_on_container image_name

@@ -13,3 +13,11 @@ docker rm container_name
 # execute a command on a container
 docker exec container_name "your_command"
 docker exec container_name cat /etc/hosts
+
+# get info about particluar container
+docker inspect container_name
+docker inspect container_id
+
+# get container logs
+docker logs container_name
+docker logs container_id
