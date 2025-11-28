@@ -1,0 +1,33 @@
+# show all running containers
+docker ps
+
+# show all containers
+docker ps -a
+
+# stop a container
+docker stop container_name
+
+# delete a container
+docker rm container_name
+
+# list available images
+docker images
+
+# delete image
+docker rmi image_name
+
+# pull a docker image without running a container
+docker pull image_name
+
+# execute a command on a container
+docker exec container_name "your_command"
+docker exec container_name cat /etc/hosts
+
+# run a docker container
+docker run image_name
+
+# run a docker container with ability to continue to use terminal
+docker run -d container_name
+
+# run a container from an image and log to it using bash
+docker run -it image_name bash
