@@ -21,3 +21,12 @@ docker inspect container_id
 # get container logs
 docker logs container_name
 docker logs container_id
+
+# build an image
+docker build -f path_to_Dockerfile -t "your tags"
+
+# push an image
+docker push damir/my-custom-app
+
+# to see all docker layers with sizes
+docker history your_image
