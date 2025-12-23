@@ -14,13 +14,22 @@ docker run -it image_name bash
 docker run --name custom_name image_name
 
 # run a container with port exposure
+# 80 - host port, 5000 - container port
 docker run -p 80:5000 image_name
 
 # run a container with mapping a persistent storage
 docker run -v /dir_on_host:/dir_on_container image_name
+docker run --mount type=bind,source=/data/mysql,target=/var/lib/mysql mysql
 
 # run a container passing a variable
 docker run -e APP_COLOR=blue my-image-name
 
 # run a container linked to another container
 docker run --link targetContainer:hostName sourceContainer
+
+# run a container with resource limits
+docker run --cpus=.5 ubuntu
+docker run --memory=100m ubuntu
+
+# run a container attached to a specific network
+docker run ubuntu --network=host

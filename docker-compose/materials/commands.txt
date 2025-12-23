@@ -1,2 +1,5 @@
 # run docker compose
 docker-compose up
+
+# run containers on the background
+docker-compose -d up

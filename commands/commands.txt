@@ -30,3 +30,16 @@ docker push damir/my-custom-app
 
 # to see all docker layers with sizes
 docker history your_image
+
+# run docker commands remotely
+docker -H=remote-docker-engine:2375
+docker -H=10.123.2.1:2375 run nginx
+
+# list all networks
+docker network ls
+
+# get details about specific network
+docket inspect _network_id_
+
+# create a new network
+docker network create --driver bridge --gateway 182.18.0.1 --subnet 182.18.0.0/16 custom-isolated-network
