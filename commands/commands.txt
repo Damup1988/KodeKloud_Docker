@@ -43,3 +43,14 @@ docket inspect _network_id_
 
 # create a new network
 docker network create --driver bridge --gateway 182.18.0.1 --subnet 182.18.0.0/16 custom-isolated-network
+
+# to login your docker registry account
+docker login
+docker login _url_to_private_registry_
+
+# deploy private docker registry
+docker run -d -p 5000:5000 --name registry registry:2
+
+# push an image to private registry
+docker image tag my-image localhost:5000/my-image
+docker push localhost:5000/my-image
